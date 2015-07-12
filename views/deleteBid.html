@@ -1,0 +1,89 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="public/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="public/bootstrap/css/simple-sidebar.css">
+<title>Admin Home</title>
+</head>
+<body>
+
+	<div id="wrapper">
+
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper">
+			<ul class="sidebar-nav">
+				<li class="sidebar-brand"><a href="#" style="color: white;">
+						Online Bidding </a></li>
+				<li><a href="/updateBid">Update bid for product</a></li>
+				<li><a href="/deleteBid">Delete bid for product</a></li>
+				<li><a href="/endBid">End bid for product</a></li>
+				<li><a href="/">Bid for product</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="container-fluid">
+		<div class="col-md-offset-3">
+			<br> <br>
+			<form action="bidding/deleteBid" method="POST">
+				<div class="col-md-5 form-group">
+					<img alt="1" src="public/images/smalldigital board.JPG" height = "350" width = "350">
+				</div>
+				<div class="row">
+					<div class="form-group">
+						<label for="productlocation" class="col-md-2 control-label">Product
+							location:</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="productlocation"
+								value="Electronic City" name="productlocation">
+						</div>
+					</div>
+	
+				<br><br>
+					<div class="form-group">
+						<label for="date" class="col-md-2 control-label">Date:</label>
+						<div class="col-md-4">
+							<input id="date" name="date" type="date" />
+						</div>
+	
+					</div>
+					<br> <br>
+					<div class="form-group">
+						<label for="timeslot" class="col-md-2 control-label">Time slot:</label>
+						<div class="col-md-4">
+							<select id = "timeslot" name = "timeslot" type="date" class = "form-control">
+								<option>06:00am - 10:00am</option>
+								<option>10:00am - 02:00pm</option>
+								<option>02:00pm - 06:00pm</option>
+								<option>06:00pm - 10:00pm</option>
+								<option>10:00pm - 02:00am</option>
+								<option>02:00am - 06:00am</option>
+								
+							</select>
+						</div>
+					</div>
+					<br><br>
+					<div class="form-group">
+						<label for="email" class="col-md-2 control-label">Email:</label>
+						<div class="col-md-4">
+							<input type="text" class="form-control" id="email"
+								placeholder="Enter e-mail" name="email">
+						</div>
+					</div>
+					
+					<br>
+					<br>
+					<div class = "form-group  col-md-offset-3">
+						<button type = "submit" class = "btn btn-warning">Delete Bid Now</button>
+					</div>
+					
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+</body>
+</html>
