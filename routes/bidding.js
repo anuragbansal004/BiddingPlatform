@@ -3,18 +3,18 @@ var router = express.Router();
 
 
 
-router.post('/addBid',function(req,res)
+router.get('/addBid/:email',function(req,res)
  {
 
- 	var bid_details=req.body;
+ 	//var bid_details=req.body;
 
     //var productId=bid_details.productlocation+""+bid_details.date+""+bid_details.timeslot;
 
-    console.log(bid_details.productId);
-    console.log(bid_details.email);
-    console.log(bid_details.amount);
+    //console.log(bid_details.productId);
+    //console.log(bid_details.email);
+    //console.log(bid_details.amount);
 
-    var post={product_id:bid_details.productId,user_email:bid_details.email,bid_amount:bid_details.amount};
+    var post={product_id:'uski maa ki',user_email:req.params.email,bid_amount:7000};
 
     var connection=req.connection;
 
